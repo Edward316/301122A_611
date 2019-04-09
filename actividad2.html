@@ -36,13 +36,14 @@
 	   </li>
 	   <li><a href="#" class="daddy">Material Multimedial O.V.I.</a>
 	   <ul class="other-section">
-	      <li><a href="video1.html" class="no-ch">Video 1</a></li>
-	      <li><a href="video2.html" class="no-ch">Video 2</a></li>	      
+	      <li><a href="video1.html" class="no-ch">Redes Mecanismo de seguridad</a></li>
+	      <li><a href="video2.html" class="no-ch">Auditoria para prevención:</a></li>	      
+	      <li><a href="video3.html" class="no-ch">Impacto en la vida cotidiana</a></li>	 	      
 	   </ul>
 	   </li>
 	   <li><a href="#" class="daddy">Actividades</a>
 	   <ul class="other-section">
-	      <li><a href="actividad1.html" class="no-ch">Actividad 1</a></li>
+	      <li><a href="actividad1.html" class="no-ch">Cuestionario 1</a></li>
 	      <li><a href="actividad2.html" class="no-ch">Actividad 2</a></li>
 	      <li><a href="actividad3.html" class="no-ch">Actividad 3</a></li>
 	      <li><a href="actividad4.html" class="no-ch">Actividad 4</a></li>
@@ -121,8 +122,6 @@
 <button id= "B5" class="bt2" onClick ="cargar(5)">Palabra 5</button>
 
 <script>
-
-
 function cargar(x)
 {
 var v=document.getElementById('P').innerHTML;
@@ -162,8 +161,6 @@ document.getElementById('PIS2').innerHTML =  nl;
 document.getElementById('PIS3').innerHTML = ' letras';
 }
 }
-
-
 function validar(x)
 {
 var n_p = document.getElementById('PIS11').innerHTML;
@@ -178,11 +175,7 @@ var pl = palabras(n_p);
 var nl = pl.length;
 mostrar(pl,nl,x);
 }
-
 }
-
-
-
 function palabras(x)
 {
 if (x == 1)
@@ -205,11 +198,7 @@ if (x == 5)
 {
 return 'CONFIDENCIALIDAD';
 }
-
-
 }
-
-
 function mostrar(x,y,z)
 {
 var n_p = document.getElementById('PIS11').innerHTML;
@@ -219,7 +208,6 @@ var letras2 = v_pala.split("");
 var faltan=0;
 for (var i = 0 ; i<y; i++)
 {
-
 if (letras2[i]== "_")
 {
 if (letras[i]== z)
@@ -245,22 +233,17 @@ if (letras[j]=="_")
 faltan=faltan+1;
 }
 }
-
 document.getElementById('PIS4').innerHTML = '          Letras faltantes: ';
 document.getElementById('PIS5').innerHTML = faltan;
 document.getElementById('P').innerHTML = palabra;
 var boton = 'B';
 boton = boton + String(n_p);
-
 if (faltan == 0)
 {
 document.getElementById(boton).innerHTML = palabra;
 document.getElementById(boton).style.background = "Green";   
 }
-
 }
-
-
 </script>
 
 
@@ -277,7 +260,8 @@ document.getElementById(boton).style.background = "Green";
 
 
 <footer>
-aprendiendo html5
+	<div id="siteFooter">Desarrollado por: Curso Dise&ntilde;o de Sitios Web<br>
+		Universidad Nacional Abierta y a Distancia UNAD - (2019)</div>
 </footer>
 
 
