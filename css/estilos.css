@@ -112,3 +112,19 @@ display: table-cell;
 border: 2px #C0C0C0;
 width: 226px;
 }
+
+.tablar{
+display: table;
+border: medium #C0C0C0 solid;
+width: inline-block;;
+}
+.columnar1{
+display: table-cell;
+border: 2px #C0C0C0;
+width: 300px;
+}
+.columnar2{
+display: table-cell;
+border: 2px #C0C0C0;
+width: 680px;
+}

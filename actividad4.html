@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang ="es">
+<head>
+<META charset ="uft-8"/>
+<meta description = "Seguridad informatica"/>
+<link rel ="stylesheet" type="text/css" media ="all" href="css/fuentes.css"/>
+<link rel ="stylesheet" type="text/css" media ="all" href="css/nav.css"/>
+<link rel ="stylesheet" type="text/css" media ="all" href="css/estilos.css"/>
+<!--/-->
+<title>Ovi Seguridad Informatica</title>
+</head>
+
+<body>
+
+<header>
+   <h1>Seguridad Informatica</h1>
+ <!--
+<figure>   aqui va el logo 
+<figcaption> titulo de la imganen </figcaption>
+</figure>
+-->
+
+</header>
+
+<nav id="siteNav">
+	<ul class="nav">
+	   <li id="active"><a href="index.html" class="active daddy main-node">Inicio</a></li>
+	   <li><a href="#">Lecturas O.V.I.</a>
+	   <ul class="other-section">
+	      <li><a href="seguridad_informatica.html" class="no-ch">Seguridad informatica</a></li>
+	      <li><a href="mecanismos_seguridad.html" class="no-ch">Mecanismos de seguridad</a></li>
+	      <li><a href="conceptos_seguridad.html" class="no-ch">Conceptos Seguridad</a></li>
+	      <li><a href="mini_tutorial_y_chuleta_de_comandos_git.html" class="no-ch">Lectura 4</a></li>
+	      <li><a href="mini_tutorial_y_chuleta_de_comandos_git.html" class="no-ch">Lectura 5</a></li>
+	   </ul>
+	   </li>
+	   <li><a href="#" class="daddy">Material Multimedial O.V.I.</a>
+	   <ul class="other-section">
+	      <li><a href="video1.html" class="no-ch">Video 1</a></li>
+	      <li><a href="video2.html" class="no-ch">Video 2</a></li>	      
+	   </ul>
+	   </li>
+	   <li><a href="#" class="daddy">Actividades</a>
+	   <ul class="other-section">
+	      <li><a href="actividad1.html" class="no-ch">Actividad 1</a></li>
+	      <li><a href="actividad2.html" class="no-ch">Actividad 2</a></li>
+	      <li><a href="actividad3.html" class="no-ch">Actividad 3</a></li>
+	      <li><a href="actividad4.html" class="no-ch">Actividad 4</a></li>
+	      <li><a href="actividad5.html" class="no-ch">Actividad 5</a></li>
+	      <li><a href="actividad6.html" class="no-ch">Actividad 6</a></li>
+	   </ul>
+	   </li>
+	   <li><a href="autores.html" class="daddy">Autores</a>	   
+	   </li>
+
+	</ul>
+</nav>
+
+<section id = "fondo">
+<!--
+<hgroup>
+<h1> encabezado </h1>
+<h2> encabezado sssd </h2>
+</hgroup>
+-->
+<h2> encabezado sssd </h2>
+
+
+
+<section id = "sec_art1">
+<article>
+
+
+<p id="val1" hidden></p>
+<br>
+<p id="val2" hidden></p>
+
+<p id="resultado" hidden></p>
+
+<h3>Relación de terminos</h3>
+
+<div class="tablar"> 
+				<div> 
+					<div class="columnar1">
+				       
+				        <h2>Termino</h2><br>
+				        <P id="P1" onclick="validarP(1)">Seguridad informática</p><br>
+						<P id="P2" onclick="validarP(2)">Seguridad de la información</p><br>
+						<P id="P3" onclick="validarP(3)">Integridad</p><br>
+						<P id="P4" onclick="validarP(4)">Autenticidad</p><br>
+						<P id="P5" onclick="validarP(5)">Disponibilidad</p><br>
+					</div>
+					<div class="columnar2">				      
+				        <h2>Definición</h2><br>
+						<P id="R3" onclick="validarR(3)">Se refiere a la confiabilidad de los datos o recursos en términos de prevención de cambios inapropiados o no autorizados.</p><br>
+						<P id="R5" onclick="validarR(5)">Se define como la capacidad de utilizar la información o el recurso deseado.</p><br>
+						<P id="R4" onclick="validarR(4)">Es la identificación y la garantía del origen de la información.</p><br>
+				        <P id="R1" onclick="validarR(1)">Es una rama de la informática y esta enfocada a la protección del hardware/softwarelos sistemas y redes.</p><br>
+						<P id="R2" onclick="validarR(2)">Son todas aquellas medidas preventivas y reactivas del hombre, de las organizaciones y de los sistemas tecnológicos que permitan resguardar y proteger la información buscando mantener la confidencialidad, autenticidad, disponibilidad e Integridad de la misma.</p>	<br>						
+					</div>
+				</div>
+			</div> 
+
+
+
+<p>Relaciones los términos con un clic en el termino y luego en su definición o viceversa. 	</p>		
+	<script>
+	function validarP(x)
+	{
+	document.getElementById('val1').innerHTML = x;	
+	var v = document.getElementById('val2').innerHTML;
+	var marcar1 = 'R'+ String(x);
+	var marcar2 = 'P'+ String(x);
+	if (v==x)
+	{
+	var col=color_v(x);
+	document.getElementById(marcar1).style.color = col;
+    document.getElementById(marcar2).style.color = col;
+    document.getElementById('val1').innerHTML = "";	
+	document.getElementById('val2').innerHTML = "";	
+	}
+	}
+	
+		
+	function validarR(x)
+	{
+	document.getElementById('val2').innerHTML = x;	
+	var v = document.getElementById('val1').innerHTML;
+	var marcar1 = 'R'+ String(v);
+	var marcar2 = 'P'+ String(v);
+	if (v==x)
+	{
+	var col=color_v(x);
+	document.getElementById(marcar1).style.color = col;
+    document.getElementById(marcar2).style.color = col;
+    document.getElementById('val1').innerHTML = "";	
+	document.getElementById('val2').innerHTML = "";	
+	}
+	}
+	
+	
+	
+	function color_v(x)
+	{
+	switch (x)
+	{
+	case 1:
+       return 'Green';
+       break;
+	case 2:
+       return 'Yellow';
+       break;
+	case 3:
+       return 'Violet';
+       break;
+	case 4:
+       return 'SkyBlue';
+       break;
+    default: 
+       return 'Coral';
+       break;
+	}
+	}
+	
+	
+	
+	
+	
+	</script>	
+	
+
+
+
+</article>
+</section>
+
+
+</section>
+
+
+<footer>
+aprendiendo html5
+</footer>
+
+
+</body>
+
+</html>
