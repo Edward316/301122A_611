@@ -37,7 +37,7 @@ body{
 	font-family: Geneva,Arial,sans-serif;
 	background-color: #C0C0C0;
 	color: #000000;
- 
+
 	margin-right: 5%;
 	margin-left: 5%;
 	font-size: small;
@@ -112,14 +112,14 @@ div#ContainerDiv{
 	text-align: right;
 	font-size: 150%;
 	direction: rtl;
-	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", Geneva,Arial,sans-serif; 
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", Geneva,Arial,sans-serif;
 }
 
 .CentredRTLText{
 	text-align: center;
 	font-size: 150%;
 	direction: rtl;
-	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", Geneva,Arial,sans-serif; 
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", Geneva,Arial,sans-serif;
 }
 
 button p.RTLText{
@@ -519,7 +519,7 @@ div.ShortAnswer{
 	background-color: #FFFFFF;
 
 	border-width: 1pt;
-	cursor: pointer;	
+	cursor: pointer;
 	box-shadow: 0.2em 0.3em 0.2em #7f7f7f;
 }
 
@@ -548,16 +548,16 @@ div.NavButtonBar{
 	border-radius: 0.5em;
 	padding: 0.5em;
 	min-width: 3em;
-	
+
 	border-left-color: #7f7f7f;
 	border-top-color: #7f7f7f;
 	border-right-color: #000000;
-	border-bottom-color: #000000; 
+	border-bottom-color: #000000;
 	background-color: #000000;
 	color: #ffffff;
 
 	border-width: 1pt;
-	cursor: pointer;	
+	cursor: pointer;
 	box-shadow: 0.2em 0.3em 0.2em #000000;
 }
 
@@ -665,7 +665,7 @@ function ShowMessage(Feedback){
 
 //Focus the OK button
 	setTimeout("document.getElementById('FeedbackOKButton').focus()", 50);
-	
+
 //
 }
 
@@ -693,7 +693,7 @@ function ShowElements(Show, TagName, ContainerToReverse){
 			else{
 				Els[i].style.visibility = 'hidden';
 			}
-		} 
+		}
 	}
 }
 
@@ -766,13 +766,13 @@ function GetViewportHeight(){
 
 function TopSettingWithScrollOffset(TopPercent){
 	var T = Math.floor(GetViewportHeight() * (TopPercent/100));
-	return GetScrollTop() + T; 
+	return GetScrollTop() + T;
 }
 
 //CODE FOR AVOIDING LOSS OF DATA WHEN BACKSPACE KEY INVOKES history.back()
 var InTextBox = false;
 
-function SuppressBackspace(e){ 
+function SuppressBackspace(e){
 	if (InTextBox == true){return;}
 	thisKey = e.keyCode;
 
@@ -869,7 +869,7 @@ function FindLongest(InArray){
 
 //SELECTION OBJECT FOR TYPING WITH KEYPAD
 var selObj = null;
-            
+
 SelObj = function(box){
 	this.box = box;
 	this.selStart = this.box.selectionStart;
@@ -932,7 +932,7 @@ var Feedback = '';
 var AcrossCaption = '';
 var DownCaption = '';
 var Correct = 'excelente, buen trabajo.';
-var Incorrect = 'Algunas de las respuestas no son correctas'; 
+var Incorrect = 'Algunas de las respuestas no son correctas';
 var GiveHint = 'Una letra correcta ha sido agregada';
 var YourScoreIs = 'Tu puntuaci&#x00F3;n es: ';
 var BuiltGrid = '';
@@ -942,7 +942,7 @@ var Score = 0;
 var InTextBox = false;
 var Locked = false;
 var TimeOver = false;
-var CaseSensitive = false; 
+var CaseSensitive = false;
 
 var InputStuff = '<form method="post" action="" onsubmit="return false;"><span class="ClueNum">[strClueNum]: </span>';
 InputStuff += '[strClue] <input autocomplete="off" onfocus="CurrentBox=this;InTextBox=true;" onblur="InTextBox=false;" id="[strBoxId]" type="edit" size="[strEditSize]" maxlength="[strMaxLength]"></input>';
@@ -959,7 +959,7 @@ function StartUp(){
 		document.getElementById('CharacterKeypad').style.display = 'block';
 	}
 
-	
+
 	AcrossCaption = document.getElementById('CluesAcrossLabel').innerHTML;
 	DownCaption = document.getElementById('CluesDownLabel').innerHTML;
 
@@ -976,14 +976,14 @@ function GetAnswerLength(Across,x,y){
 		while ((x<L.length)&&(L[x][y].length > 0)){
 			Result += L[x][y].length;
 			x++;
-		} 
+		}
 		return Result;
 	}
 	else{
 		while ((y<L[x].length)&&(L[x][y].length > 0)){
 			Result += L[x][y].length;
 			y++;
-		} 	
+		}
 		return Result;
 	}
 }
@@ -1053,7 +1053,7 @@ function SplitStringToPerceivedChars(InString, PC){
 function EnterAnswer(Guess,Across,AnsLength,x,y){
 	var PC = new Array();
 	SplitStringToPerceivedChars(Guess, PC);
-	
+
 	var i=x;
 	var j=y;
 	var Letter = 0;
@@ -1184,9 +1184,9 @@ function CheckAnswers(){
 	var AllCorrect = true;
 	var TotLetters = 0;
 	var CorrectLetters = 0;
-	var LetterFromKey = ''; 
+	var LetterFromKey = '';
 	var LetterFromGuess = '';
-	
+
 //Check each letter
 	for (var i=0; i<L.length; i++){
 		for (var j=0; j<L[i].length; j++){
@@ -1200,7 +1200,7 @@ function CheckAnswers(){
 					LetterFromKey = L[i][j].toUpperCase();
 					LetterFromGuess = G[i][j].toUpperCase();
 				}
-				if (LetterFromGuess != LetterFromKey){ 
+				if (LetterFromGuess != LetterFromKey){
 					G[i][j] = '';
 //Blank that square in the grid
 					SetGridSquareValue(i,j,'');
@@ -1231,7 +1231,7 @@ function CheckAnswers(){
 
 	ShowMessage(Output);
 	WriteToInstructions(Output);
-	
+
 	if ((AllCorrect == true)||(TimeOver == true)){
 
 
@@ -1271,7 +1271,7 @@ function TypeChars(Chars){
 <header>
    <h1>Seguridad Informatica</h1>
  <!--
-<figure>   aqui va el logo 
+<figure>   aqui va el logo
 <figcaption> titulo de la imganen </figcaption>
 </figure>
 -->
@@ -1286,15 +1286,15 @@ function TypeChars(Chars){
 	      <li><a href="seguridad_informatica.html" class="no-ch">Seguridad informatica</a></li>
 	      <li><a href="mecanismos_seguridad.html" class="no-ch">Mecanismos de seguridad</a></li>
 	      <li><a href="conceptos_seguridad.html" class="no-ch">Conceptos Seguridad</a></li>
-	      <li><a href="mini_tutorial_y_chuleta_de_comandos_git.html" class="no-ch">Lectura 4</a></li>
+	       <li><a href="Por qué es importante tener un antivirus.html" class="no-ch">¿Porqué es importante tener un antivirus?</a></li>
 	      <li><a href="mini_tutorial_y_chuleta_de_comandos_git.html" class="no-ch">Lectura 5</a></li>
 	   </ul>
 	   </li>
 	   <li><a href="#" class="daddy">Material Multimedial O.V.I.</a>
 	   <ul class="other-section">
 	      <li><a href="video1.html" class="no-ch">Redes Mecanismo de seguridad</a></li>
-	      <li><a href="video2.html" class="no-ch">Auditoria para prevención:</a></li>	      
-	      <li><a href="video3.html" class="no-ch">Impacto en la vida cotidiana</a></li>	 	      
+	      <li><a href="video2.html" class="no-ch">Auditoria para prevención:</a></li>
+	      <li><a href="video3.html" class="no-ch">Impacto en la vida cotidiana</a></li>
 	   </ul>
 	   </li>
 	   <li><a href="#" class="daddy">Actividades</a>
@@ -1307,7 +1307,7 @@ function TypeChars(Chars){
 	      <li><a href="actividad6.html" class="no-ch">Actividad 6</a></li>
 	   </ul>
 	   </li>
-	   <li><a href="autores.html" class="daddy">Autores</a>	   
+	   <li><a href="autores.html" class="daddy">Autores</a>
 	   </li>
 
 	</ul>
@@ -1326,7 +1326,7 @@ function TypeChars(Chars){
 <section id = "sec_art1">
 <article>
 	<br/>
-	
+
 
 
 
@@ -1355,7 +1355,7 @@ function TypeChars(Chars){
 		<button id="CheckButton1" class="FuncButton" onclick="CheckAnswers()">&#160;Check&#160;</button>
 
 		 -->
-		 
+
 		<table class="CrosswordGrid">
 		<tbody>
 
