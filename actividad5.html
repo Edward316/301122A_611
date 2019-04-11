@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang ="es">
+<head>
+<META charset ="uft-8"/>
+<meta description = "Seguridad informatica"/>
+<link rel ="stylesheet" type="text/css" media ="all" href="css/fuentes.css"/>
+<link rel ="stylesheet" type="text/css" media ="all" href="css/nav.css"/>
+<link rel ="stylesheet" type="text/css" media ="all" href="css/estilos.css"/>
+<!--/-->
+<title>Ovi Seguridad Informatica</title>
+</head>
+
+<body>
+
+<header>
+   <h1>Seguridad Informatica</h1>
+ <!--
+<figure>   aqui va el logo
+<figcaption> titulo de la imganen </figcaption>
+</figure>
+-->
+
+</header>
+
+<nav id="siteNav">
+	<ul class="nav">
+	   <li id="active"><a href="index.html" class="active daddy main-node">Inicio</a></li>
+	   <li><a href="#">Lecturas O.V.I.</a>
+	   <ul class="other-section">
+	      <li><a href="seguridad_informatica.html" class="no-ch">Seguridad informatica</a></li>
+	      <li><a href="mecanismos_seguridad.html" class="no-ch">Mecanismos de seguridad</a></li>
+	      <li><a href="conceptos_seguridad.html" class="no-ch">Conceptos Seguridad</a></li>
+        <li><a href="Por qué es importante tener un antivirus.html" class="no-ch">¿Porqué es importante tener un antivirus?</a></li>
+       <li><a href="Top10AppsSeguridad.html" class="no-ch">Top 10 Applicaciones de Seguridad</a></li>
+	   </ul>
+	   </li>
+	   <li><a href="#" class="daddy">Material Multimedial O.V.I.</a>
+	   <ul class="other-section">
+	      <li><a href="video1.html" class="no-ch">Video 1</a></li>
+	      <li><a href="video2.html" class="no-ch">Video 2</a></li>
+	   </ul>
+	   </li>
+	   <li><a href="#" class="daddy">Actividades</a>
+	   <ul class="other-section">
+	      <li><a href="actividad1.html" class="no-ch">Actividad 1</a></li>
+	      <li><a href="actividad2.html" class="no-ch">Actividad 2</a></li>
+	      <li><a href="actividad3.html" class="no-ch">Actividad 3</a></li>
+	      <li><a href="actividad4.html" class="no-ch">Actividad 4</a></li>
+	      <li><a href="actividad5.html" class="no-ch">Actividad 5</a></li>
+	      <li><a href="actividad6.html" class="no-ch">Actividad 6</a></li>
+	   </ul>
+	   </li>
+	   <li><a href="autores.html" class="daddy">Autores</a>
+	   </li>
+
+	</ul>
+</nav>
+
+<section id = "fondo">
+<!--
+<hgroup>
+<h1> encabezado </h1>
+<h2> encabezado sssd </h2>
+</hgroup>
+-->
+<h2> encabezado sssd </h2>
+
+
+
+<section id = "sec_art1">
+<article>
+
+<h2> Sopa de Letras </h2>
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+   <script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+   <script type="text/javascript" src="js/wordfind.js"></script>
+   <script type="text/javascript" src="js/wordfindgame.js">
+   </script>
+
+   <div id='juego'></div>
+   <div id='Palabras'></div>
+
+   <div><button id='solve'>Resolver el juego</button></div>
+   <script>
+   var words = ['Cracker','Antivirus','Malware','Phishing','Exploit','Keylogger'];
+   var gamePuzzle = wordfindgame.create(words, '#juego', '#Palabras');
+
+   var puzzle = wordfind.newPuzzle(words,{height: 18, width:18, fillBlanks: false});
+   wordfind.print(puzzle);
+
+   $('#solve').click( function() {wordfindgame.solve(gamePuzzle, words);});
+
+   </script>
+
+
+</article>
+</section>
+
+
+</section>
+
+
+<footer>
+aprendiendo html5
+</footer>
+
+
+</body>
+
+</html>
