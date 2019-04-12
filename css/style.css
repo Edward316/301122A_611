@@ -14,6 +14,18 @@ p {
 /**
 * Styles for the puzzle
 */
+section#sopa
+{
+		background : #011E30;
+		display: inline-block;
+	    border-radius: 0.5em;
+	
+}
+
+
+
+
+
 #puzzle {
   border: 1px solid black;
   padding: 20px;

@@ -59,7 +59,7 @@ section#fondo{
 	}
 
 
-section#Contenido,aside{
+section#Contenido,aside,concen{
 	background : #1E6381;
 	border-radius: 0.5em;
 	display: inline-block;
@@ -71,6 +71,8 @@ section#Contenido,aside{
 	vertical-align:top;	
 	width: 71%;
 }
+
+
 
 article{
 	background : #011E30;
